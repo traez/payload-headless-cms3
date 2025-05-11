@@ -28,54 +28,55 @@ export default async function pageTodoId({ params }: { params: Promise<{ id: str
   */
 
   return (
-    <section className="min-w-[320px] max-w-[1400px] mx-auto px-4 py-8 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-      <div className="mb-6">
-        <Link href="/" className="text-blue-500 hover:underline flex items-center gap-2">
-          <span>←</span> Back to todos
-        </Link>
-      </div>
-
-      <article className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg border">
-        <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">{todo.title}</h1>
-
-        {todo.description && (
-          <p className="text-gray-600 dark:text-gray-300 mb-4">{todo.description}</p>
-        )}
-
-        <p
-          className={`mb-4 inline-block py-1 px-3 rounded-full text-sm ${
-            todo.completed
-              ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100'
-              : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100'
-          }`}
-        >
-          {todo.completed ? 'Completed' : 'Not Completed'}
-        </p>
-
-        {todo.media ? (
-          <div className="my-6 flex justify-center">
-            <div className="relative max-h-[300px]">
-              <Image
-                src={(todo.media as Media).url!}
-                alt={(todo.media as Media).alt ?? todo.title}
-                width={(todo.media as Media).width ?? 0}
-                height={(todo.media as Media).height ?? 0}
-                className="object-contain max-h-[300px]"
-              />
-            </div>
-          </div>
-        ) : (
-          <div className="flex items-center justify-center w-full h-[200px] my-6 bg-gray-100 dark:bg-gray-600 rounded">
-            <p className="text-sm text-gray-500 dark:text-gray-400">No media</p>
-          </div>
-        )}
-
-        <div className="text-sm text-gray-500 dark:text-gray-400 mt-4 border-t pt-4">
-          <p className="mb-1">Created: {new Date(todo.createdAt).toLocaleString()}</p>
-          <p>Updated: {new Date(todo.updatedAt).toLocaleString()}</p>
+    <div className="w-full h-auto bg-[#78A9F6]">
+      <section className="min-w-[320px] max-w-[1400px] mx-auto px-4 py-8 bg-white dark:bg-gray-800  shadow-md">
+        <div className="mb-6">
+          <Link href="/" className="text-blue-500 hover:underline flex items-center gap-2">
+            <span>←</span> Back to todos
+          </Link>
         </div>
-      </article>
-    </section>
+
+        <article className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg border">
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">{todo.title}</h1>
+
+          {todo.description && (
+            <p className="text-gray-600 dark:text-gray-300 mb-4">{todo.description}</p>
+          )}
+
+          <p
+            className={`mb-4 inline-block py-1 px-3 rounded-full text-sm ${
+              todo.completed
+                ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100'
+                : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100'
+            }`}
+          >
+            {todo.completed ? 'Completed' : 'Not Completed'}
+          </p>
+
+          {todo.media ? (
+            <div className="my-6 flex justify-center">
+              <div className="relative max-h-[300px]">
+                <Image
+                  src={(todo.media as Media).url!}
+                  alt={(todo.media as Media).alt ?? todo.title}
+                  width={(todo.media as Media).width ?? 0}
+                  height={(todo.media as Media).height ?? 0}
+                  className="object-contain max-h-[300px]"
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="flex items-center justify-center w-full h-[200px] my-6 bg-gray-100 dark:bg-gray-600 rounded">
+              <p className="text-sm text-gray-500 dark:text-gray-400">No media</p>
+            </div>
+          )}
+
+          <div className="text-sm text-gray-500 dark:text-gray-400 mt-4 border-t pt-4">
+            <p className="mb-1">Created: {new Date(todo.createdAt).toLocaleString()}</p>
+            <p>Updated: {new Date(todo.updatedAt).toLocaleString()}</p>
+          </div>
+        </article>
+      </section>
+    </div>
   )
 }
-
