@@ -3,7 +3,7 @@ export default function Footer() {
     <>
       <footer className="p-2 flex flex-row justify-center items-center gap-4 sm:gap-8 text-xs sm:text-sm border-t-2 border-solid border-gray-800 bg-[#9CC3FF] text-blue-900 w-full max-w-[1440px]">
         <a
-          href="https://github.com/traez/payload-headless-cms"
+          href="https://github.com/traez/payload-headless-cms3"
           target="_blank"
           rel="noopener noreferrer"
           className=" hover:underline hover:text-blue-900 font-bold text-black"
