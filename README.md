@@ -74,7 +74,7 @@ Example: `/(age)/about` still appears as `/about` in the URL
 
 **5 Dependencies**  
 **Transitive Dependencies**: Some packages (like Drizzle) are available in your project even without being listed in package.json because they're required by explicitly included packages
-Example: `@payloadcms/db-postgres` automatically brings in Drizzle-related packages
+Example: `@payloadcms/db-postgres` automatically brings in Drizzle-related packages  
 **Key Dependencies**:
 - `sharp` (0.32.6): High-performance image processing library for handling image uploads and resizing. Necessary when using Next Image component and deploying on platforms outside Vercel.
 - `cross-env` (^7.0.3): Allows defining environment variables across different OS platforms
