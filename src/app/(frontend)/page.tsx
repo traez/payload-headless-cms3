@@ -17,8 +17,8 @@ export default async function HomePage() {
   })
 
   return (
-    <div className="w-full h-auto bg-[#78A9F6]">
-      <section className="min-w-[320px] max-w-[1400px] mx-auto px-4 py-8 bg-white dark:bg-gray-800  shadow-md">
+    <div className="w-full min-h-[calc(100vh-84px)] bg-[#78A9F6]">
+      <section className="min-w-[320px] max-w-[1400px] min-h-[calc(100vh-84px)] mx-auto px-4 py-8 bg-white dark:bg-gray-800  shadow-md">
         <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
           Payload To Do List
           {user?.email ? (
