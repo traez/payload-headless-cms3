@@ -104,10 +104,10 @@ In dynamic routes (e.g., `todos/[id]/page.tsx`), you can use either Payload API 
 
 ## Important Steps
 1. Install the adapter: `pnpm add @payloadcms/storage-vercel-blob`
-2. **Critical**: Run `pnpm generate:importmap` after installation
-3. Without this, you'll get: "Payload CMS can't find the VercelBlobClientUploadHandler component in its import map"
-4. This applies to all Payload plugins (`@payloadcms/plugin-form-builder`, etc.)
-5. Configure in your Payload config file with your `BLOB_READ_WRITE_TOKEN`
+2. Configure in your Payload config file with your `BLOB_READ_WRITE_TOKEN`
+3. **Critical**: Run `pnpm generate:importmap` after installation
+4. Without this, you'll get: "Payload CMS can't find the VercelBlobClientUploadHandler component in its import map"
+5. This applies to all Payload plugins (`@payloadcms/plugin-form-builder`, etc.)
 
 **11 Troubleshooting**  
 For build errors like "UnhandledSchemeError: Reading from 'cloudflare:sockets' is not handled by plugins", check the workaround in [GitHub issue #12197](https://github.com/payloadcms/payload/issues/12197#issuecomment-2869524711)
